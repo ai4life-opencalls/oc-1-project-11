@@ -3,7 +3,7 @@
 # Project #11: Segmentation and tracking of epithelial cells
 
 ---
-If any of the instructions are not working, please open an issue or contact us at [ai4life@fht.org](ai4life@fht.org)! 
+If any of the instructions are not working, please [open an issue](https://github.com/ai4life-opencalls/project_11/issues) or contact us at [ai4life@fht.org](ai4life@fht.org)! 
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -15,29 +15,30 @@ If any of the instructions are not working, please open an issue or contact us a
 
 
 ## Introduction
-In this tutorial, we'll show how to segment and track individual epithelial cells in a series of images obtained with fluorescence microscopy.   
+In this tutorial, we will demonstrate how to segment and track individual epithelial cells in a series of images obtained with fluorescence microscopy.   
 
-We will start by denoising the images using [N2V](https://github.com/juglab/n2v) Python package, which helps to denoise microscopy images using deep learning. Next, we will segment cells using [Cellpose](https://www.cellpose.org/), a popular deep-learning cell segmentation algorithm. Finally, we'll track the segmented cells using the TrackMate plugin in Fiji.
+We will start by denoising the images using [N2V](https://github.com/juglab/n2v) Python package, which denoises microscopy images using deep learning. Next, we will segment cells using [Cellpose](https://www.cellpose.org/), a popular deep-learning cell segmentation algorithm. Finally, we'll track the segmented cells using the TrackMate plugin in Fiji.
 
 Here is an example of the original data and resulting tracking: 
 <div> 
   <img src="resources/images/MAX_CTRL_Wound1_cropped_result.gif" width="100%">
 </div>
 
-Let's get started! 
+
+Let's get started! 🚀
 
 ## Installation
 
 ### Install Python package manager
 We recommend installing [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) or [mamba](https://mamba.readthedocs.io/en/latest/). Go to the website and follow the installation instructions for your operating system.  
-During installation, select the installation folder that you have permissions for, like your home folder.
+During installation, select the installation folder that you have permissions for, such as your home folder.
 
 ### Install N2V
 Follow [N2V installation](https://github.com/juglab/n2v) for official instructions.
 <details>
 <summary>N2V installation details</summary>
 
-1. Open terminal (like PowerShell on Windows or Terminal on MacOS)
+1. Open terminal (such as Terminal on MacOS, for Windows we recommand [Git for Windows](https://gitforwindows.org/))
 2. Create and activate a new conda environment:
     ```bash
     conda create -n n2v python=3.9 
@@ -108,9 +109,9 @@ Follow  [TrackMate-Cellpose](https://imagej.net/plugins/trackmate/detectors/trac
 ## Step #1: Denoising with N2V
 If the images are noisy, denoising can help achieve better segmentation performance. Most deep learning segmentation models are trained with clean images, so noise in the data severely affects the resulting accuracy.  
 
-You will likely need to re-train the denoising model for different experiments because differences in noise distribution will affect the performance.
+You will likely need to re-train the denoising model for different experiments because differences in noise distribution will affect the performance, but worry not N2V is quite fast to train!
 
-N2V offers a [Python package](https://github.com/juglab/n2v) and a [Napari plugin](https://github.com/juglab/napari-n2v), or if you do not have a GPU available, you can try using a Google Colab N2V notebook from [ZeroCostDL4Mic](https://github.com/HenriquesLab/ZeroCostDL4Mic).  
+N2V offers a [Python package](https://github.com/juglab/n2v) and a [napari plugin](https://github.com/juglab/napari-n2v), or if you do not have a GPU available, you can try using a Google Colab N2V notebook from [ZeroCostDL4Mic](https://github.com/HenriquesLab/ZeroCostDL4Mic).  
 
 ### Usage:
 1. Download the example jupyter notebook here: [N2V_denoising.ipynb](resources/N2V_denoising.ipynb)
