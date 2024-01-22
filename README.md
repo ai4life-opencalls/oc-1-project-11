@@ -3,7 +3,11 @@
 # Project #11: Segmentation and tracking of epithelial cells
 
 ---
+This page was created by the [AI4Life project](https://ai4life.eurobioimaging.eu) using data provided by Madeline Lovejoy at [The University of Toledo](https://www.utoledo.edu/). 
+
+
 If any of the instructions are not working, please [open an issue](https://github.com/ai4life-opencalls/project_11/issues) or contact us at [ai4life@fht.org](ai4life@fht.org)! 
+
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -15,6 +19,8 @@ If any of the instructions are not working, please [open an issue](https://githu
 
 
 ## Introduction
+Researchers from [The University of Toledo](https://www.utoledo.edu/) are imaging a confluent 2D monolayer of epithelial cells. The monolayer is scratched with a pipette tip, and the video shows the migration of the cells to close the wound. They would like to compare the behavior of different cell lineages automatically. They are interested in segmenting and tracking individual cells and nuclei in time.
+
 In this tutorial, we will demonstrate how to segment and track individual epithelial cells in a series of images obtained with fluorescence microscopy.   
 
 We will start by denoising the images using [N2V](https://github.com/juglab/n2v) Python package, which denoises microscopy images using deep learning. Next, we will segment cells using [Cellpose](https://www.cellpose.org/), a popular deep-learning cell segmentation algorithm. Finally, we'll track the segmented cells using the TrackMate plugin in Fiji.
@@ -214,4 +220,5 @@ Here is an example of the settings:
 
 ## Conclusion
 In this tutorial, we showed how to use [N2V](https://github.com/juglab/n2v), [https://www.cellpose.org/](https://www.cellpose.org/), and [TrackMate-Cellpose](https://imagej.net/plugins/trackmate/detectors/trackmate-cellpose) to segment and track nuclei of epithelial cells in a series of images obtained with fluorescence microscopy.  
-This page was created by the [AI4Life project](https://ai4life.eurobioimaging.eu) with data from [The University of Toledo](https://www.utoledo.edu/). 
+
+[AI4Life](https://ai4life.eurobioimaging.eu)  is a Horizon Europe-funded project that brings together the computational and life science communities. 
