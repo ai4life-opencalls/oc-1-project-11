@@ -20,8 +20,9 @@ In this tutorial, we'll show how to segment and track individual epithelial cell
 We will start by denoising the images using [N2V](https://github.com/juglab/n2v) Python package, which helps to denoise microscopy images using deep learning. Next, we will segment cells using [Cellpose](https://www.cellpose.org/), a popular deep-learning cell segmentation algorithm. Finally, we'll track the segmented cells using the TrackMate plugin in Fiji.
 
 Here is an example of the original data and resulting tracking: 
-
-![](resources/images/MAX_CTRL_Wound1_cropped_result.gif)
+<div> 
+  <img src="resources/images/MAX_CTRL_Wound1_cropped_result.gif" width="70%">
+</div>
 
 Let's get started! 
 
@@ -126,7 +127,9 @@ N2V offers a [Python package](https://github.com/juglab/n2v), a [Napari plugin](
 6. To run a pre-trained model, download and unzip the [pretrained model](resources/models/n2v_2D.zip). Then, in the Jupyter Notebook, go to the section *7. Prediction*.
 
 Here is an example of original and denoised image:
-![](resources/images/noisy_denoised.jpg)
+<div> 
+  <img src="resources/images/noisy_denoised.jpg" width="70%">
+</div>
 
 
 ## Step #2: Segmentation with Cellpose
@@ -148,7 +151,10 @@ Here is an example of original and denoised image:
 8. Add a custom pretrained model to the interface: ``Models > Add custom torch model to GUI``.
 9. Select this model in `custom models` section and run it by clicking `run model`
 
-![](resources/images/cellpose_interface.png)
+<div> 
+  <img src="resources/images/cellpose_interface.png" width="70%">
+</div>
+
 
 ### How to train your own model
 
@@ -158,7 +164,11 @@ You can watch a video tutorial on how to use Cellpose here - [https://www.cellpo
 2. Look through the errors in the predictions and correct a few of them. `Click Help` > `Help with GUI` for help with labeling controls.
 3. Train a new model on the corrected data. Click `Models` > `Train new model`
 4. Choose the best model from step 3 as an initial model. You cannot select a custom model as an initial model.
-5. We suggest using the following settings: ![](resources/images/cellpose_settings.png)
+5. We suggest using the following settings: 
+   <div> 
+     <img src="resources/images/cellpose_settings.png" width="30%">
+   </div>
+   
 6. After training, you’ll see your new model in the `custom models` section. It will also be saved in the folder with your data. `Cell diameter` will also be updated with what the model learned from the data.
 7. You can continue iterating: predict with the model - fix a couple of mistakes - train a new model - fix mistakes - train a new model …
 
@@ -170,24 +180,36 @@ To use the resulting model on a time series and track the segmentations, install
 
 ### Usage
 1. Open a **denoised** time-series.
-![](resources/images/first_image.jpg)  
-2. Check if `Path to cellpose` is correct.
+2. Check if `Path to cellpose` is correct.  
 3. Select `Custom` model from `Pretrained model`.
 4. Select the channels you want to segment.
-5. Select the path to your model. Enter the channels you want to segment and the approximate diameter of your objects.
+5. Select the path to your model. Enter the channels you want to segment and the approximate diameter of your objects.  
 Here is an example of the settings:
-![](resources/images/trackmate_cellpose.png)  
+   <div> 
+     <img src="resources/images/trackmate_cellpose.png" width="30%">
+   </div>
+
 6. Press `preview` to run prediction on one timepoint and check the result. The objects on the image should now be highlighted. 
-![](resources/images/first_prediction.jpg)  
+   <div> 
+     <img src="resources/images/first_prediction.jpg" width="30%">
+   </div>
+
 7. Press `next` to run prediction on all time points (it can take a while). Do not filter the resulting spots.
 8. For tracking we chose the LAP tracker. Here are the settings we used:
-![](resources/images/trackmate_tracking_settings.png)  
+   <div> 
+     <img src="resources/images/trackmate_tracking_settings.png" width="30%">
+   </div>
+   
 9. Here are the visualization settings we used:
-![](resources/images/trackmate_vis_settings.png)  
-10. You should see a similar result:
-![](resources/images/trackmate_result.gif)  
-11. To improve the results play around with different distance settings, feature penalties, and track filtering.
+   <div> 
+     <img src="resources/images/trackmate_vis_settings.png" width="30%">
+   </div>
 
+10. To improve the results play around with different distance settings, feature penalties, and track filtering.
+
+<div align="left"> 
+  <img src="resources/images/trackmate_result.gif" width="50%">
+</div>
 
 ## Conclusion
 In this tutorial we showed how to use [N2V](https://github.com/juglab/n2v), [https://www.cellpose.org/](https://www.cellpose.org/) and [TrackMate-Cellpose](https://imagej.net/plugins/trackmate/detectors/trackmate-cellpose) to segment and track nuclei of epithelial cells in a series of images obtained with fluorescence microscopy.  
