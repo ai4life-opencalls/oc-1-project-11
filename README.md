@@ -21,7 +21,7 @@ We will start by denoising the images using [N2V](https://github.com/juglab/n2v)
 
 Here is an example of the original data and resulting tracking: 
 <div> 
-  <img src="resources/images/MAX_CTRL_Wound1_cropped_result.gif" width="70%">
+  <img src="resources/images/MAX_CTRL_Wound1_cropped_result.gif" width="100%">
 </div>
 
 Let's get started! 
@@ -128,7 +128,7 @@ N2V offers a [Python package](https://github.com/juglab/n2v), a [Napari plugin](
 
 Here is an example of original and denoised image:
 <div> 
-  <img src="resources/images/noisy_denoised.jpg" width="70%">
+  <img src="resources/images/noisy_denoised.jpg" width="100%">
 </div>
 
 
@@ -166,7 +166,7 @@ You can watch a video tutorial on how to use Cellpose here - [https://www.cellpo
 4. Choose the best model from step 3 as an initial model. You cannot select a custom model as an initial model.
 5. We suggest using the following settings: 
    <div> 
-     <img src="resources/images/cellpose_settings.png" width="30%">
+     <img src="resources/images/cellpose_settings.png" width="50%">
    </div>
    
 6. After training, you’ll see your new model in the `custom models` section. It will also be saved in the folder with your data. `Cell diameter` will also be updated with what the model learned from the data.
@@ -186,23 +186,23 @@ To use the resulting model on a time series and track the segmentations, install
 5. Select the path to your model. Enter the channels you want to segment and the approximate diameter of your objects.  
 Here is an example of the settings:
    <div> 
-     <img src="resources/images/trackmate_cellpose.png" width="30%">
+     <img src="resources/images/trackmate_cellpose.png" width="50%">
    </div>
 
 6. Press `preview` to run prediction on one timepoint and check the result. The objects on the image should now be highlighted. 
    <div> 
-     <img src="resources/images/first_prediction.jpg" width="30%">
+     <img src="resources/images/first_prediction.jpg" width="50%">
    </div>
 
 7. Press `next` to run prediction on all time points (it can take a while). Do not filter the resulting spots.
 8. For tracking we chose the LAP tracker. Here are the settings we used:
    <div> 
-     <img src="resources/images/trackmate_tracking_settings.png" width="30%">
+     <img src="resources/images/trackmate_tracking_settings.png" width="50%">
    </div>
    
 9. Here are the visualization settings we used:
    <div> 
-     <img src="resources/images/trackmate_vis_settings.png" width="30%">
+     <img src="resources/images/trackmate_vis_settings.png" width="50%">
    </div>
 
 10. To improve the results play around with different distance settings, feature penalties, and track filtering.
