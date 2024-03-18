@@ -4,7 +4,9 @@
   </a>
 </p>
 
+
 # Project #11: Segmentation and tracking of epithelial cells
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10792915.svg)](https://doi.org/10.5281/zenodo.10792915)
 
 ---
 This page was created by the [AI4Life project](https://ai4life.eurobioimaging.eu) using data provided by Madeline Lovejoy and Rafael Garcia-Mata (PhD) at [Garcia-Mata Lab](https://www.garciamatalab.com/)
